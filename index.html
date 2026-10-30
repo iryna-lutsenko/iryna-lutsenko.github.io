@@ -1,364 +1,379 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Iryna Lutsenko · Frontend Developer</title>
-<meta name="description" content="Frontend developer from Kyiv. Responsive, pixel-perfect landing pages for online course brands in 8 countries.">
-<meta property="og:title" content="Iryna Lutsenko · Frontend Developer">
-<meta property="og:description" content="Course landing pages built for Laba, Skvot, robot_dreams and Vocabulaba.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-:root{
-  --bg:#f6f7fb;
-  --surface:#ffffff;
-  --ink:#141a33;
-  --muted:#5b6380;
-  --line:#dde1ee;
-  --accent:#d6336c;      /* redline magenta, the colour of Figma measurements */
-  --accent-soft:#fbe3ec;
-  --block:#e8ebf5;
-  --block-strong:#c9cfe4;
-  --f-display:"Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
-  --f-body:"Instrument Sans", "Segoe UI", Roboto, Arial, sans-serif;
-  --f-mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --bg:#0f1220; --surface:#171b2e; --ink:#eef0f8; --muted:#9aa2c0; --line:#2a3050;
-    --accent:#ff6b9a; --accent-soft:#3a1e2c; --block:#232946; --block-strong:#363e66;
-    color-scheme:dark;
-  }
-}
-:root[data-theme="dark"]{
-  --bg:#0f1220; --surface:#171b2e; --ink:#eef0f8; --muted:#9aa2c0; --line:#2a3050;
-  --accent:#ff6b9a; --accent-soft:#3a1e2c; --block:#232946; --block-strong:#363e66;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-body{
-  background:var(--bg); color:var(--ink);
-  font-family:var(--f-body); font-size:16px; line-height:1.6;
-  padding-left:max(16px, env(safe-area-inset-left, 0px));
-  padding-right:max(16px, env(safe-area-inset-right, 0px));
-}
-.wrap{max-width:1080px; margin:0 auto; padding-block:56px 72px; display:grid; gap:88px}
-a{color:inherit}
-a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
-.mono{font-family:var(--f-mono); font-size:12px; letter-spacing:.02em}
-.eyebrow{font-family:var(--f-mono); font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--accent)}
-h1,h2,h3{font-family:var(--f-display); text-wrap:balance; margin:0; line-height:1.1}
-h2{font-size:clamp(28px,4vw,40px); font-weight:700}
-p{margin:0}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Iryna Lutsenko · Frontend Developer</title>
+    <meta
+      name="description"
+      content="Frontend developer from Kyiv. Responsive, pixel-perfect landing pages for online course brands in 8 countries."
+    />
+    <meta property="og:title" content="Iryna Lutsenko · Frontend Developer" />
+    <meta
+      property="og:description"
+      content="Course landing pages built for Laba, Skvot, robot_dreams and Vocabulaba."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <div class="eyebrow">Frontend Developer · Kyiv, Ukraine · Open to remote</div>
+        <div class="guide">
+          <span class="dim mono">pixel-perfect · 1440 → 375</span>
+          <h1>Iryna Lutsenko</h1>
+          <span class="dim-v mono">4 years in production</span>
+        </div>
+        <p class="role">I turn Figma designs into fast, responsive pages that sell.</p>
+        <p class="lead">
+          For four years at Laba Group I built the landing pages that sell online courses for Laba,
+          Skvot, robot_dreams and Vocabulaba in eight countries, from Ukraine and Poland to Spain,
+          Turkey and Ireland. Below are eight of them, each with the sections I built and a live
+          link.
+        </p>
+        <div class="facts mono">
+          <span><b>15+</b> landing templates</span>
+          <span><b>4</b> brands</span>
+          <span><b>8</b> markets: UA · PL · CZ · HU · RO · ES · TR · IE</span>
+        </div>
+        <div class="actions">
+          <a class="btn" href="#work">See the work</a>
+          <a
+            class="btn ghost"
+            href="https://ua.linkedin.com/in/iryna-lutsenko-32a960187"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </div>
+      </header>
 
-/* Hero with measurement guides */
-.hero{position:relative; padding:40px 0 8px; display:grid; gap:24px}
-.guide{position:relative; padding:28px 24px; border:1px dashed var(--accent)}
-.guide::before,.guide::after{content:""; position:absolute; background:var(--accent); width:7px; height:7px}
-.guide::before{top:-4px; left:-4px}
-.guide::after{bottom:-4px; right:-4px}
-.dim{position:absolute; top:-22px; right:0; color:var(--accent)}
-.dim-v{position:absolute; left:-4px; bottom:-26px; color:var(--accent)}
-.hero h1{font-size:clamp(44px,8vw,88px); font-weight:700; letter-spacing:-.02em}
-.role{font-family:var(--f-display); font-size:clamp(20px,2.6vw,28px); font-weight:500; color:var(--muted)}
-.lead{max-width:62ch; font-size:18px}
-.actions{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
-.btn{display:inline-flex; align-items:center; gap:8px; padding:12px 18px; border-radius:6px; font-weight:600; text-decoration:none; border:1px solid var(--ink); background:var(--ink); color:var(--bg); font:600 15px var(--f-body); cursor:pointer}
-.btn.ghost{background:transparent; color:var(--ink)}
-.facts{display:flex; flex-wrap:wrap; gap:8px 24px; color:var(--muted)}
-.facts b{color:var(--ink); font-weight:600}
+      <section id="work" aria-labelledby="work-h">
+        <div class="head">
+          <div class="eyebrow">Selected work</div>
+          <h2 id="work-h">Course landing pages in production</h2>
+          <p>
+            The column on the left is each page's real section order, top to bottom. Highlighted
+            blocks are the interactive parts.
+          </p>
+        </div>
 
-/* Section head */
-.head{display:grid; gap:10px; max-width:62ch}
-.head p{color:var(--muted)}
+        <div class="works">
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">Hero</span><span class="hi">Double marquee</span
+                ><span>Outcomes</span><span>Audience</span><span>Teacher</span
+                ><span class="hi">Icon carousel</span><span class="hi">Program accordion</span
+                ><span>Lead form</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">Laba</span><span class="tag">Course page</span>
+              </div>
+              <h3>Personal Finance and Investments</h3>
+              <ul>
+                <li>Two running-text lines moving in opposite directions under the hero</li>
+                <li>Infinite carousel of course materials with icons</li>
+                <li>Long program that expands and collapses</li>
+              </ul>
+              <a
+                class="link"
+                href="https://laba.ua/lecture/5744-personal-finance-investments"
+                target="_blank"
+                rel="noopener"
+                >laba.ua/lecture/5744-personal-finance-investments ↗</a
+              >
+            </div>
+          </article>
 
-/* Work list */
-.works{display:grid; gap:20px; margin-top:28px}
-.work{display:grid; grid-template-columns:200px minmax(0,1fr); gap:28px; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:24px}
-.stack{display:grid; gap:4px; align-content:start}
-.stack span{display:block; height:22px; border-radius:3px; background:var(--block); font:500 10px/22px var(--f-mono); color:var(--muted); padding:0 8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-.stack span.hi{background:var(--accent-soft); color:var(--accent); height:30px; line-height:30px}
-.stack span.tall{height:40px; line-height:40px; background:var(--block-strong); color:var(--ink)}
-.stack-cap{margin-top:6px; color:var(--muted)}
-.info{display:grid; gap:12px; align-content:start; min-width:0}
-.meta{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
-.tag{font:500 12px var(--f-mono); padding:3px 8px; border-radius:4px; border:1px solid var(--line); color:var(--muted)}
-.tag.brand{border-color:var(--ink); color:var(--ink)}
-.info h3{font-size:24px; font-weight:700}
-.info ul{margin:0; padding-left:18px; display:grid; gap:4px}
-.link{font-weight:600; color:var(--accent); text-decoration:none; overflow-wrap:anywhere}
-.link:hover{text-decoration:underline}
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">Hero with tags</span><span class="hi">Marquee</span
+                ><span>Audience cards</span><span>Teacher + logos</span
+                ><span class="hi">Program accordion</span><span>Lead form</span
+                ><span class="hi">Reviews slider</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">Laba</span><span class="tag">Course page</span>
+              </div>
+              <h3>Strategic Marketing</h3>
+              <ul>
+                <li>Three audience cards with illustrations</li>
+                <li>Seven-module program with homework and workshops inside each item</li>
+                <li>Reviews slider with student photos</li>
+              </ul>
+              <a
+                class="link"
+                href="https://laba.ua/lecture/220-strategicheskijj-marketing"
+                target="_blank"
+                rel="noopener"
+                >laba.ua/lecture/220-strategicheskijj-marketing ↗</a
+              >
+            </div>
+          </article>
 
-/* Skills */
-.skills{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr)); gap:16px; margin-top:28px}
-.skill{border-top:2px solid var(--ink); padding-top:12px; display:grid; gap:6px}
-.skill h3{font-size:18px}
-.skill p{color:var(--muted)}
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">GIF hero</span><span>Audience 01–03</span><span>Topic cards</span
+                ><span>Teacher</span><span class="hi">Program accordion</span><span>Lead form</span
+                ><span>Certificate</span><span class="hi">Reviews + read more</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">Laba</span><span class="tag">Course page</span>
+              </div>
+              <h3>First-time Manager</h3>
+              <ul>
+                <li>Animated hero and topic cards with images</li>
+                <li>Long reviews that open with “read more”</li>
+                <li>Separate mobile image for the teacher block</li>
+              </ul>
+              <a
+                class="link"
+                href="https://laba.ua/lecture/kerivnik-pochatkivec"
+                target="_blank"
+                rel="noopener"
+                >laba.ua/lecture/kerivnik-pochatkivec ↗</a
+              >
+            </div>
+          </article>
 
-/* Process */
-.steps{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:16px; margin:28px 0 0; padding:0; list-style:none; counter-reset:s}
-.steps li{counter-increment:s; display:grid; gap:6px; padding:16px; border:1px dashed var(--line); border-radius:8px}
-.steps li::before{content:"step " counter(s); font:500 12px var(--f-mono); color:var(--accent); text-transform:uppercase; letter-spacing:.1em}
-.steps b{font-family:var(--f-display); font-size:18px}
-.steps span{color:var(--muted)}
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">Hero</span><span class="hi">Client quotes + logos</span
+                ><span>Numbers</span><span>What’s inside</span><span>Lead form</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">Laba</span><span class="tag">B2B page</span>
+              </div>
+              <h3>Laba for Teams</h3>
+              <ul>
+                <li>Corporate training page for HR and team leads</li>
+                <li>Client photos paired with company logos</li>
+                <li>Key numbers block and consultation form</li>
+              </ul>
+              <a
+                class="link"
+                href="https://laba.ua/lecture/laba-for-teams"
+                target="_blank"
+                rel="noopener"
+                >laba.ua/lecture/laba-for-teams ↗</a
+              >
+            </div>
+          </article>
 
-/* Contact */
-.contact{display:grid; gap:20px; background:var(--ink); color:var(--bg); border-radius:12px; padding:36px 28px}
-.contact h2{color:var(--bg)}
-.contact .row{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
-.addr{font:500 16px var(--f-mono); padding:10px 14px; border:1px solid color-mix(in srgb, var(--bg) 35%, transparent); border-radius:6px; user-select:all; overflow-wrap:anywhere}
-.contact .btn{background:var(--bg); color:var(--ink); border-color:var(--bg)}
-.contact .btn.ghost{background:transparent; color:var(--bg)}
-.note{font:12px var(--f-mono); opacity:.75; min-height:1em}
-footer{color:var(--muted); font-size:13px}
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">Hero</span><span>Approach</span
+                ><span class="hi">Course catalog · show all</span><span>Teachers</span
+                ><span>Client logos</span><span>Lead form</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">Vocabulaba</span><span class="tag">School homepage</span>
+              </div>
+              <h3>Vocabulaba English School</h3>
+              <ul>
+                <li>Catalog of 13+ courses that expands with “show all”</li>
+                <li>Teacher grid with photos and bios</li>
+                <li>Anchor navigation between sections</li>
+              </ul>
+              <a
+                class="link"
+                href="https://laba.ua/lecture/vocabulaba"
+                target="_blank"
+                rel="noopener"
+                >laba.ua/lecture/vocabulaba ↗</a
+              >
+            </div>
+          </article>
 
-@media (max-width:680px){
-  .work{grid-template-columns:minmax(0,1fr)}
-  .stack{grid-template-columns:repeat(auto-fill,minmax(110px,1fr))}
-  .stack span.tall,.stack span.hi{height:22px; line-height:22px}
-  .wrap{gap:64px; padding-block:32px 48px}
-}
-@media (prefers-reduced-motion:no-preference){
-  .btn{transition:transform .15s ease}
-  .btn:hover{transform:translateY(-1px)}
-}
-</style>
-</head>
-<body>
-<div class="wrap">
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">Hero</span><span>Stats</span
+                ><span class="hi">Animated dashboards</span><span class="hi">Countdown timer</span
+                ><span>Teacher</span><span class="hi">Drag-to-scroll gallery</span
+                ><span>Program</span><span>Lead form</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">Laba</span><span class="tag">Course page</span>
+              </div>
+              <h3>Power BI</h3>
+              <ul>
+                <li>Dashboard demos animated in CSS and JavaScript, with a replay button</li>
+                <li>Countdown timer to the course start</li>
+                <li>Gallery you scroll by dragging</li>
+              </ul>
+              <a
+                class="link"
+                href="https://laba.ua/lecture/power-land-6568a28b2d6e0"
+                target="_blank"
+                rel="noopener"
+                >laba.ua/lecture/power-land ↗</a
+              >
+            </div>
+          </article>
 
-  <header class="hero">
-    <div class="eyebrow">Frontend Developer · Kyiv, Ukraine · Open to remote</div>
-    <div class="guide">
-      <span class="dim mono">pixel-perfect · 1440 → 375</span>
-      <h1>Iryna Lutsenko</h1>
-      <span class="dim-v mono">4 years in production</span>
-    </div>
-    <p class="role">I turn Figma designs into fast, responsive pages that sell.</p>
-    <p class="lead">For four years at Laba Group I built the landing pages that sell online courses for Laba, Skvot, robot_dreams and Vocabulaba in eight countries, from Ukraine and Poland to Spain, Turkey and Ireland. Below are eight of them, each with the sections I built and a live link.</p>
-    <div class="facts mono">
-      <span><b>15+</b> landing templates</span>
-      <span><b>4</b> brands</span>
-      <span><b>8</b> markets: UA · PL · CZ · HU · RO · ES · TR · IE</span>
-    </div>
-    <div class="actions">
-      <a class="btn" href="#work">See the work</a>
-      <a class="btn ghost" href="https://ua.linkedin.com/in/iryna-lutsenko-32a960187" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-  </header>
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">GIF hero with tags</span><span>Career paths</span
+                ><span>About</span><span>Lecturers</span><span>Audience</span><span>Benefits</span
+                ><span class="hi">20-lesson program</span><span>Lead form</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">Skvot</span><span class="tag">Course page</span>
+              </div>
+              <h3>3D Printing</h3>
+              <ul>
+                <li>Skvot’s bold creative-school style, different from Laba’s</li>
+                <li>Program split into six blocks and twenty lessons</li>
+              </ul>
+              <a
+                class="link"
+                href="https://skvot.io/uk/course/yak-stvoryuvati-modeli-dlya-3d-druku"
+                target="_blank"
+                rel="noopener"
+                >skvot.io/uk/course/yak-stvoryuvati-modeli-dlya-3d-druku ↗</a
+              >
+            </div>
+          </article>
 
-  <section id="work" aria-labelledby="work-h">
-    <div class="head">
-      <div class="eyebrow">Selected work</div>
-      <h2 id="work-h">Course landing pages in production</h2>
-      <p>The column on the left is each page's real section order, top to bottom. Highlighted blocks are the interactive parts.</p>
-    </div>
+          <article class="work">
+            <div>
+              <div class="stack" aria-hidden="true">
+                <span class="tall">Hero with tags</span><span>Audience</span
+                ><span>Program blocks</span><span>Teacher</span><span class="hi">Dated program</span
+                ><span>Workshops</span><span>Lead form</span>
+              </div>
+            </div>
+            <div class="info">
+              <div class="meta">
+                <span class="tag brand">robot_dreams</span><span class="tag">Course page</span>
+              </div>
+              <h3>Electronics for Developers</h3>
+              <ul>
+                <li>IT school style for a technical audience</li>
+                <li>Sixteen lessons with dates, times and homework</li>
+              </ul>
+              <a
+                class="link"
+                href="https://robotdreams.cc/uk/course/2720-electronics-for-developers"
+                target="_blank"
+                rel="noopener"
+                >robotdreams.cc/uk/course/2720-electronics-for-developers ↗</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
 
-    <div class="works">
-
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">Hero</span><span class="hi">Double marquee</span><span>Outcomes</span><span>Audience</span><span>Teacher</span><span class="hi">Icon carousel</span><span class="hi">Program accordion</span><span>Lead form</span>
+      <section aria-labelledby="skills-h">
+        <div class="head">
+          <div class="eyebrow">Skills</div>
+          <h2 id="skills-h">What I work with</h2>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <h3>Layout</h3>
+            <p>
+              HTML5, CSS3, SCSS, BEM. Responsive and pixel-perfect from Figma, cross-browser and
+              cross-device fixes.
+            </p>
+          </div>
+          <div class="skill">
+            <h3>JavaScript</h3>
+            <p>
+              ES6+. Sliders (Swiper.js), accordions, marquees, timers, animated sections, lead
+              forms.
+            </p>
+          </div>
+          <div class="skill">
+            <h3>React</h3>
+            <p>
+              Components, state management, data visualization. Built an analytics page with charts.
+            </p>
+          </div>
+          <div class="skill">
+            <h3>Tools</h3>
+            <p>Git, GitHub, Figma, Jira, and AI coding assistants connected to Figma and Jira.</p>
           </div>
         </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">Laba</span><span class="tag">Course page</span></div>
-          <h3>Personal Finance and Investments</h3>
-          <ul>
-            <li>Two running-text lines moving in opposite directions under the hero</li>
-            <li>Infinite carousel of course materials with icons</li>
-            <li>Long program that expands and collapses</li>
-          </ul>
-          <a class="link" href="https://laba.ua/lecture/5744-personal-finance-investments" target="_blank" rel="noopener">laba.ua/lecture/5744-personal-finance-investments ↗</a>
-        </div>
-      </article>
+      </section>
 
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">Hero with tags</span><span class="hi">Marquee</span><span>Audience cards</span><span>Teacher + logos</span><span class="hi">Program accordion</span><span>Lead form</span><span class="hi">Reviews slider</span>
-          </div>
+      <section aria-labelledby="how-h">
+        <div class="head">
+          <div class="eyebrow">How I work</div>
+          <h2 id="how-h">From a Figma file to a live page</h2>
         </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">Laba</span><span class="tag">Course page</span></div>
-          <h3>Strategic Marketing</h3>
-          <ul>
-            <li>Three audience cards with illustrations</li>
-            <li>Seven-module program with homework and workshops inside each item</li>
-            <li>Reviews slider with student photos</li>
-          </ul>
-          <a class="link" href="https://laba.ua/lecture/220-strategicheskijj-marketing" target="_blank" rel="noopener">laba.ua/lecture/220-strategicheskijj-marketing ↗</a>
-        </div>
-      </article>
+        <ol class="steps">
+          <li>
+            <b>Read the design</b
+            ><span
+              >Check every breakpoint and state in Figma and ask the designer about gaps before
+              coding.</span
+            >
+          </li>
+          <li>
+            <b>Build the sections</b
+            ><span
+              >Reusable blocks in BEM, so the next course page is assembled, not rewritten.</span
+            >
+          </li>
+          <li>
+            <b>Test on real devices</b
+            ><span>Compare against the mockup and fix browser and device differences.</span>
+          </li>
+          <li>
+            <b>Ship with the team</b
+            ><span>Hand off to the product manager and backend through Jira and Git.</span>
+          </li>
+        </ol>
+      </section>
 
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">GIF hero</span><span>Audience 01–03</span><span>Topic cards</span><span>Teacher</span><span class="hi">Program accordion</span><span>Lead form</span><span>Certificate</span><span class="hi">Reviews + read more</span>
-          </div>
+      <section class="contact" aria-labelledby="contact-h">
+        <div class="eyebrow">Contact</div>
+        <h2 id="contact-h">Looking for a frontend developer?</h2>
+        <div class="row">
+          <span class="addr" id="email">irina.yankovskaya2424@gmail.com</span>
+          <button class="btn" type="button" id="copy">Copy email</button>
+          <a
+            class="btn ghost"
+            href="https://ua.linkedin.com/in/iryna-lutsenko-32a960187"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn ↗</a
+          >
         </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">Laba</span><span class="tag">Course page</span></div>
-          <h3>First-time Manager</h3>
-          <ul>
-            <li>Animated hero and topic cards with images</li>
-            <li>Long reviews that open with “read more”</li>
-            <li>Separate mobile image for the teacher block</li>
-          </ul>
-          <a class="link" href="https://laba.ua/lecture/kerivnik-pochatkivec" target="_blank" rel="noopener">laba.ua/lecture/kerivnik-pochatkivec ↗</a>
-        </div>
-      </article>
+        <p class="note" id="note" aria-live="polite"></p>
+      </section>
 
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">Hero</span><span class="hi">Client quotes + logos</span><span>Numbers</span><span>What’s inside</span><span>Lead form</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">Laba</span><span class="tag">B2B page</span></div>
-          <h3>Laba for Teams</h3>
-          <ul>
-            <li>Corporate training page for HR and team leads</li>
-            <li>Client photos paired with company logos</li>
-            <li>Key numbers block and consultation form</li>
-          </ul>
-          <a class="link" href="https://laba.ua/lecture/laba-for-teams" target="_blank" rel="noopener">laba.ua/lecture/laba-for-teams ↗</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">Hero</span><span>Approach</span><span class="hi">Course catalog · show all</span><span>Teachers</span><span>Client logos</span><span>Lead form</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">Vocabulaba</span><span class="tag">School homepage</span></div>
-          <h3>Vocabulaba English School</h3>
-          <ul>
-            <li>Catalog of 13+ courses that expands with “show all”</li>
-            <li>Teacher grid with photos and bios</li>
-            <li>Anchor navigation between sections</li>
-          </ul>
-          <a class="link" href="https://laba.ua/lecture/vocabulaba" target="_blank" rel="noopener">laba.ua/lecture/vocabulaba ↗</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">Hero</span><span>Stats</span><span class="hi">Animated dashboards</span><span class="hi">Countdown timer</span><span>Teacher</span><span class="hi">Drag-to-scroll gallery</span><span>Program</span><span>Lead form</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">Laba</span><span class="tag">Course page</span></div>
-          <h3>Power BI</h3>
-          <ul>
-            <li>Dashboard demos animated in CSS and JavaScript, with a replay button</li>
-            <li>Countdown timer to the course start</li>
-            <li>Gallery you scroll by dragging</li>
-          </ul>
-          <a class="link" href="https://laba.ua/lecture/power-land-6568a28b2d6e0" target="_blank" rel="noopener">laba.ua/lecture/power-land ↗</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">GIF hero with tags</span><span>Career paths</span><span>About</span><span>Lecturers</span><span>Audience</span><span>Benefits</span><span class="hi">20-lesson program</span><span>Lead form</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">Skvot</span><span class="tag">Course page</span></div>
-          <h3>3D Printing</h3>
-          <ul>
-            <li>Skvot’s bold creative-school style, different from Laba’s</li>
-            <li>Program split into six blocks and twenty lessons</li>
-          </ul>
-          <a class="link" href="https://skvot.io/uk/course/yak-stvoryuvati-modeli-dlya-3d-druku" target="_blank" rel="noopener">skvot.io/uk/course/yak-stvoryuvati-modeli-dlya-3d-druku ↗</a>
-        </div>
-      </article>
-
-      <article class="work">
-        <div>
-          <div class="stack" aria-hidden="true">
-            <span class="tall">Hero with tags</span><span>Audience</span><span>Program blocks</span><span>Teacher</span><span class="hi">Dated program</span><span>Workshops</span><span>Lead form</span>
-          </div>
-        </div>
-        <div class="info">
-          <div class="meta"><span class="tag brand">robot_dreams</span><span class="tag">Course page</span></div>
-          <h3>Electronics for Developers</h3>
-          <ul>
-            <li>IT school style for a technical audience</li>
-            <li>Sixteen lessons with dates, times and homework</li>
-          </ul>
-          <a class="link" href="https://robotdreams.cc/uk/course/2720-electronics-for-developers" target="_blank" rel="noopener">robotdreams.cc/uk/course/2720-electronics-for-developers ↗</a>
-        </div>
-      </article>
-
+      <footer class="mono">Iryna Lutsenko · Frontend Developer · Kyiv, Ukraine</footer>
     </div>
-  </section>
-
-  <section aria-labelledby="skills-h">
-    <div class="head">
-      <div class="eyebrow">Skills</div>
-      <h2 id="skills-h">What I work with</h2>
-    </div>
-    <div class="skills">
-      <div class="skill"><h3>Layout</h3><p>HTML5, CSS3, SCSS, BEM. Responsive and pixel-perfect from Figma, cross-browser and cross-device fixes.</p></div>
-      <div class="skill"><h3>JavaScript</h3><p>ES6+. Sliders (Swiper.js), accordions, marquees, timers, animated sections, lead forms.</p></div>
-      <div class="skill"><h3>React</h3><p>Components, state management, data visualization. Built an analytics page with charts.</p></div>
-      <div class="skill"><h3>Tools</h3><p>Git, GitHub, Figma, Jira, and AI coding assistants connected to Figma and Jira.</p></div>
-    </div>
-  </section>
-
-  <section aria-labelledby="how-h">
-    <div class="head">
-      <div class="eyebrow">How I work</div>
-      <h2 id="how-h">From a Figma file to a live page</h2>
-    </div>
-    <ol class="steps">
-      <li><b>Read the design</b><span>Check every breakpoint and state in Figma and ask the designer about gaps before coding.</span></li>
-      <li><b>Build the sections</b><span>Reusable blocks in BEM, so the next course page is assembled, not rewritten.</span></li>
-      <li><b>Test on real devices</b><span>Compare against the mockup and fix browser and device differences.</span></li>
-      <li><b>Ship with the team</b><span>Hand off to the product manager and backend through Jira and Git.</span></li>
-    </ol>
-  </section>
-
-  <section class="contact" aria-labelledby="contact-h">
-    <div class="eyebrow">Contact</div>
-    <h2 id="contact-h">Looking for a frontend developer?</h2>
-    <div class="row">
-      <span class="addr" id="email">irina.yankovskaya2424@gmail.com</span>
-      <button class="btn" type="button" id="copy">Copy email</button>
-      <a class="btn ghost" href="https://ua.linkedin.com/in/iryna-lutsenko-32a960187" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-    <p class="note" id="note" aria-live="polite"></p>
-  </section>
-
-  <footer class="mono">Iryna Lutsenko · Frontend Developer · Kyiv, Ukraine</footer>
-</div>
-
-<script>
-(function(){
-  var btn=document.getElementById('copy'), note=document.getElementById('note'), el=document.getElementById('email');
-  btn.addEventListener('click',function(){
-    var text=el.textContent.trim();
-    function fallback(){
-      var r=document.createRange(); r.selectNodeContents(el);
-      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      note.textContent='Email selected. Press Ctrl+C to copy.';
-    }
-    if(navigator.clipboard&&navigator.clipboard.writeText){
-      navigator.clipboard.writeText(text).then(function(){note.textContent='Email copied.';},fallback);
-    } else { fallback(); }
-  });
-})();
-</script>
-</body>
+  </body>
 </html>
